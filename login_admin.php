@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PHE CELL</title>
+	<title>LOGIN</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -28,8 +28,6 @@
 			<input type="password" name="password" class="form_login" placeholder="Password ..">
 
 			<input type="submit" class="tombol_login" value="LOGIN">
-
-            <p align="center">Belum Punya akun? <a href=register.php><b>Daftar</b></a></p>
 		</form>
 		
 	</div>

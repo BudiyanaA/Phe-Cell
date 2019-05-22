@@ -16,7 +16,7 @@
         else {
             $_SESSION['username'] = $hasil['username'];
             $_SESSION['nama_cust'] = $hasil['nama_cust'];
-            header('location:index.php');
+            header('location:menu_transaksi.php');
         }
    }
 ?>

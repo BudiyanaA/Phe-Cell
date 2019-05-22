@@ -16,7 +16,7 @@
         else {
             $_SESSION['username'] = $hasil['id_admin'];//keep
             $_SESSION['nama_cust'] = $hasil['nama'];//keep
-            header('location:index.php');
+            header('location:status_transaksi.php');
         }
    }
 ?>
