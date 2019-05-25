@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
 	$id = $_GET['id'];
 	
 	//cek ke database apakah ada data siswa dengan siswa_id='$id'
-	$cek = mysql_query("SELECT siswa_id FROM siswa WHERE siswa_id='$id'") or die(mysql_error());
+	$cek = mysql_query("SELECT id_pesanan FROM pesanan WHERE id_pesanan='$id'") or die(mysql_error());
 	
 	//jika data siswa tidak ada
 	if(mysql_num_rows($cek) == 0){
@@ -22,7 +22,7 @@ if(isset($_GET['id'])){
 	}else{
 		
 		//jika data ada di database, maka melakukan query DELETE table siswa dengan kondisi WHERE siswa_id='$id'
-		$del = mysql_query("DELETE FROM siswa WHERE siswa_id='$id'");
+		$del = mysql_query("DELETE FROM pesanan WHERE id_pesanan='$id'");
 		
 		//jika query DELETE berhasil
 		if($del){

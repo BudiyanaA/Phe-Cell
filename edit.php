@@ -20,7 +20,7 @@
 	$id = $_GET['id'];
 	
 	//melakukan query ke database dg SELECT table siswa dengan kondisi WHERE siswa_id = '$id'
-	$show = mysql_query("SELECT * FROM siswa WHERE siswa_id='$id'");
+	$show = mysql_query("SELECT * FROM pesanan WHERE id_pesanan='$id'");
 	
 	//cek apakah data dari hasil query ada atau tidak
 	if(mysql_num_rows($show) == 0){
@@ -36,43 +36,33 @@
 	}
 	?>
 	
-	<form action="edit-proses.php" method="post">
+	<form action="edit_proses.php" method="post">
 		<input type="hidden" name="id" value="<?php echo $id; ?>">	<!-- membuat inputan hidden dan nilainya adalah siswa_id -->
 		<table cellpadding="3" cellspacing="0">
 			<tr>
-				<td>NIS</td>
-				<td>:</td>
-				<td><input type="text" name="nis" value="<?php echo $data['siswa_nis']; ?>" required></td>	<!-- value diambil dari hasil query -->
-			</tr>
-			<tr>
-				<td>Nama Lengkap</td>
-				<td>:</td>
-				<td><input type="text" name="nama" size="30" value="<?php echo $data['siswa_nama']; ?>" required></td> <!-- value diambil dari hasil query -->
-			</tr>
-			<tr>
-				<td>Kelas</td>
+				<td>Status Pembayaran</td>
 				<td>:</td>
 				<td>
-					<select name="kelas" required>
-						<option value="">Pilih Kelas</option>
-						<option value="X" <?php if($data['siswa_kelas'] == 'X'){ echo 'selected'; } ?>>X</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="XI" <?php if($data['siswa_kelas'] == 'XI'){ echo 'selected'; } ?>>XI</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="XII" <?php if($data['siswa_kelas'] == 'XII'){ echo 'selected'; } ?>>XII</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
+					<div class="kustom-select" style="width:150px;">
+					<select name="status_pembayaran" required>
+					<option value="">Pilih</option>
+					<option value="1" <?php if($data['status_pembayaran'] == '1'){echo 'selected';} ?>>Sudah Bayar</option>
+					<option value="0" <?php if($data['status_pembayaran'] == '0'){echo 'selected';} ?>>Belum Bayar</option>
 					</select>
+					</div>
 				</td>
 			</tr>
 			<tr>
-				<td>Jurusan</td>
+				<td>Status Pengiriman</td>
 				<td>:</td>
 				<td>
-					<select name="jurusan" required>
-						<option value="">Pilih Jurusan</option>
-						<option value="Teknik Komputer dan Jaringan" <?php if($data['siswa_jurusan'] == 'Teknik Komputer dan Jaringan'){ echo 'selected'; } ?>>Teknik Komputer dan Jaringan</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="Multimedia" <?php if($data['siswa_jurusan'] == 'Multimedia'){ echo 'selected'; } ?>>Multimedia</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="Akuntansi" <?php if($data['siswa_jurusan'] == 'Akuntansi'){ echo 'selected'; } ?>>Akuntansi</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="Perbankan" <?php if($data['siswa_jurusan'] == 'Perbankan'){ echo 'selected'; } ?>>Perbankan</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
-						<option value="Pemasaran" <?php if($data['siswa_jurusan'] == 'Pemasaran'){ echo 'selected'; } ?>>Pemasaran</option>	<!-- jika data di database sama dengan value maka akan terselect/terpilih -->
+					<div class="kustom-select" style="width:150px;">
+					<select name="status_pengiriman" required>
+						<option value="">Pilih</option>
+						<option value="1" <?php if($data['status_pengiriman'] == '1'){echo 'selected';} ?>>Sudah Terkirim</option>
+						<option value="0" <?php if($data['status_pengiriman'] == '0'){echo 'selected';} ?>>Belum Terkirim</option>
 					</select>
+					</div>	
 				</td>
 			</tr>
 			<tr>

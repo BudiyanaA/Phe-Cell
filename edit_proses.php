@@ -9,13 +9,11 @@ if(isset($_POST['simpan'])){
 	
 	//jika tombol tambah benar di klik maka lanjut prosesnya
 	$id			= $_POST['id'];	//membuat variabel $id dan datanya dari inputan hidden id
-	$nis		= $_POST['nis'];	//membuat variabel $nis dan datanya dari inputan NIS
-	$nama		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
-	$kelas		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
-	$jurusan	= $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
+	$bayar		= $_POST['status_pembayaran'];
+	$kirim		= $_POST['status_pengiriman'];
 	
 	//melakukan query dengan perintah UPDATE untuk update data ke database dengan kondisi WHERE siswa_id='$id' <- diambil dari inputan hidden id
-	$update = mysql_query("UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_kelas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'") or die(mysql_error());
+	$update = mysql_query("UPDATE pesanan SET status_pembayaran='$bayar', status_pengiriman='$kirim' WHERE id_pesanan='$id'") or die(mysql_error());
 	
 	//jika query update sukses
 	if($update){

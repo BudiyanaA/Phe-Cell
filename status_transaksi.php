@@ -104,8 +104,8 @@
 											</div>	
 										</td>
                     <td>
-                        <a class="edit" href="edit.php?id=<?php echo $data['id']; ?>">Edit</a> |
-                        <a class="hapus" href="hapus.php?id=<?php echo $data['id']; ?>">Hapus</a>					
+                        <a class="edit" href="edit.php?id=<?php echo $data['id_pesanan']; ?>">Edit</a> |
+                        <a class="hapus" href="delete.php?id=<?php echo $data['id_pesanan']; ?>">Hapus</a>					
                     </td>
                 </tr>
             <?php } ?>

@@ -40,7 +40,7 @@ create table if not exists promo(
 );
 -- add produk
 INSERT INTO promo VALUES
-('0000000000000000',0,DEFAULT),
+('',0,DEFAULT),
 ('1234567890123456',5000,DEFAULT),
 ('1231231231231231',7000,DEFAULT),
 ('4321432143214321',3000,DEFAULT),
@@ -69,7 +69,7 @@ create table pesanan(
     status_pengiriman boolean DEFAULT false, 
     nomor_hp char(12) NOT NULL, 
     nominal int(7), 
-username char(20), id_produk char(4), kd_promo char(16) DEFAULT '0000000000000000', id_admin char(6), 
+username char(20), id_produk char(4), kd_promo char(16) DEFAULT '', id_admin char(6), 
 FOREIGN KEY (username) REFERENCES customer(username),
 FOREIGN KEY (id_produk) REFERENCES produk(id_produk),
 FOREIGN KEY (kd_promo) REFERENCES promo(kd_promo),

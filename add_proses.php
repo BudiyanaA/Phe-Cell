@@ -1,38 +1,42 @@
 <?php
-//mulai proses tambah data
-
-//cek dahulu, jika tombol tambah di klik
+/* daftar user baru*/
+session_start();
+if(!isset($_SESSION['username'])){
+	header('location:register.php');
+}
 if(isset($_POST['tambah'])){
+	require_once("koneksi.php");
+	echo $_POST['diskon'];
+	echo '<br />';
+	$nominal	= $_POST['nominal'];
+	$diskon		= $_POST['diskon'];
+	$username 	= $_SESSION['username'];
+	$nomor_hp	= $_POST['no_hp'];
+	$provider	= $_POST['provider'];
+
+	$kode1 = (int) date("h");
+	$kode2 = (int) date("i");
+	$kode3 = (int) date("s");
+	$kode = (int) $kode1.$kode2.$kode3;
+	$kode++;
+	echo $kode;
+	$id_pesanan	= $_SESSION['username'].$kode;
+
+	$input = mysql_query("INSERT INTO pesanan VALUES('$id_pesanan', DEFAULT, DEFAULT, DEFAULT, '$nomor_hp', '$nominal', '$username', '$provider', '$diskon', DEFAULT)") or die(mysql_error());
 	
-	//inlcude atau memasukkan file koneksi ke database
-	include('koneksi.php');
-	
-	//jika tombol tambah benar di klik maka lanjut prosesnya
-	$nis		= $_POST['nis'];	//membuat variabel $nis dan datanya dari inputan NIS
-	$nama		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
-	$kelas		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
-	$jurusan	= $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
-	
-	//melakukan query dengan perintah INSERT INTO untuk memasukkan data ke database
-	$input = mysql_query("INSERT INTO siswa VALUES(NULL, '$nis', '$nama', '$kelas', '$jurusan')") or die(mysql_error());
-	
-	//jika query input sukses
 	if($input){
 		
-		echo 'Data berhasil di tambahkan! ';		//Pesan jika proses tambah sukses
-		echo '<a href="tambah.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
+		echo 'Data berhasil di tambahkan! ';		
+		echo '<a href="tambah.php">Kembali</a>';	
+	}
+	else{
 		
-	}else{
-		
-		echo 'Gagal menambahkan data! ';		//Pesan jika proses tambah gagal
-		echo '<a href="tambah.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
-		
+		echo 'Gagal menambahkan data! ';
+		echo '<a href="tambah.php">Kembali</a>';
 	}
 
-}else{	//jika tidak terdeteksi tombol tambah di klik
-
-	//redirect atau dikembalikan ke halaman tambah
+}
+else{
 	echo '<script>window.history.back()</script>';
-
 }
 ?>
