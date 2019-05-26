@@ -10,8 +10,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PHE CELL</title>
+	<title>LOGIN</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Nunito|Source+Sans+Pro&display=swap');
+	</style>
 </head>
 <body>
 	
@@ -19,18 +22,20 @@
 	<h3>Solusi paket data anda</h3>
 
 	<div class="kotak">
-		<p class="tulisan_login">Silahkan login</p>
-
 		<form action="proses_login.php" method="post">
+			<div>
+				<label class="judul-form">Silahkan Login</label>
+			</div>
 			<label>Username</label>
-            <input type="text" name="username" class="form_login" placeholder="Username atau email ..">
+            <input type="text" name="username" class="form_login" placeholder="Username..">
             
 			<label>Password</label>
 			<input type="password" name="password" class="form_login" placeholder="Password ..">
 
 			<input type="submit" class="tombol_login" value="LOGIN">
-
-            <p align="center">Belum Punya akun? <a href=register.php><b>Daftar</b></a></p>
+			<br/>
+			<br/>
+			<label align="center">Belum punya akun? Daftarkan akun anda <a href="register.php" class="link">disini..</a></label>
 		</form>
 		
 	</div>

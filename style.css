@@ -1,6 +1,6 @@
 body{
-	font-family: sans-serif;
-	background: #b7cac9;
+	font-family: 'Nunito', sans-serif;
+	background: rgb(177, 82, 19)
 }
 
 .inapp{
@@ -20,7 +20,7 @@ h1{
 	text-align: center;
 	/*ketebalan font*/
 	font-weight: 500;
-	color: #5f5f5f
+	color: #ffffff
 }
 
 h3{
@@ -33,25 +33,33 @@ h4{
 	font-weight: 100;
 	color: #8d8d8d
 }
+
+.judul-form {
+	margin: 87px;
+	font-size: 16pt;
+	text-transform: uppercase;
+}
  
 .tulisan_login{
 	text-align: center;
 	/*membuat semua huruf menjadi kapital*/
 	text-transform: uppercase;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 20pt
+	font-family: 'Nunito', sans-serif;
+	font-size: 20pt	
 }
  
 .kotak{
 	width: 350px;
-	background: white;
+	background: rgb(46, 46, 46);
 	/*meletakkan form ke tengah*/
 	margin: 40px auto;
 	padding: 30px 20px;
 }
  
 label{
-	font-size: 11pt;
+	font-family: 'Nunito', sans-serif;
+	font-size: 12pt;
+	color: white
 }
  
 .form_login{
@@ -82,11 +90,11 @@ label{
 	border-radius: 3px;
 	padding: 10px 20px;
 }
- 
+
 .link{
 	color: #636161;
 	text-decoration: none;
-	font-size: 11pt;
+	font-size: 12pt;
 }
 
 .tombol{
@@ -119,91 +127,28 @@ label{
 	width: 150px;
 }
 
-.table1{
-	border-collapse: collapse;
-	font-family: arial;
-	color:#5E5B5C;
+.btn-light {
+	background-color: transparent;
+	border-color: rgba(204, 204, 204, 0);
+  }
+
+.col-md-8{
+	margin: 20px;
 }
 
-thead th{
-	text-align: left;
-	padding: 10px;
+.struk{
+	width: 300px;
 }
 
-tbody td{
-	border-top: 1px solid #e3e3e3;
-	padding: 10px;
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
 }
 
-tbody tr:nth-child(even){
-	background: #F6F5FA;
+.kdbayar {
+    color: #46de4b;
 }
 
-tbody tr:hover{
-	background: #EAE9F5
-}
-
-/* The container must be positioned relative: */
-.kustom-select {
-	position: relative;
-	font-family: Arial;
-  }
-  
-  .kustom-select select {
-	display: none; /*hide original SELECT element: */
-  }
-  
-  .select-selected {
-	background-color: DodgerBlue;
-  }
-  
-  /* Style the arrow inside the select element: */
-  .select-selected:after {
-	position: absolute;
-	content: "";
-	top: 14px;
-	right: 10px;
-	width: 0;
-	height: 0;
-	border: 6px solid transparent;
-	border-color: #fff transparent transparent transparent;
-  }
-  
-  /* Point the arrow upwards when the select box is open (active): */
-  .select-selected.select-arrow-active:after {
-	border-color: transparent transparent #fff transparent;
-	top: 7px;
-  }
-  
-  /* style the items (options), including the selected item: */
-  .select-items div,.select-selected {
-	color: #ffffff;
-	padding: 8px 16px;
-	border: 1px solid transparent;
-	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-	cursor: pointer;
-  }
-  
-  /* Style items (options): */
-  .select-items {
-	position: absolute;
-	background-color: rgb(100, 100, 100);
-	top: 100%;
-	left: 0;
-	right: 0;
-	z-index: 99;
-  }
-  
-  /* Hide the items when the select box is closed: */
-  .select-hide {
-	display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-	background-color: rgba(0, 0, 0, 0.1);
-  }
-
-.navbar-inverse{
-	background-color: rgb(109, 49, 8);
-	color: #fff
+.awal{
+	margin: 10px;
+	width: 100px;
 }

@@ -1,7 +1,10 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Phe-Cell</title>
+	<title>Konfirmasi Pembayaran</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="jquery.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -14,28 +17,48 @@
       </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark" >
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top" >
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#"><img src="src/Logo Phecell.png" height="30" alt="axis"></a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="menu_transaksi.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add.php">Beli</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="bayar.php">Bayar<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Hi, <?php echo $_SESSION['nama_cust'];?></a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-warning" href="logout.php">Logout</a>
+              </li>
+          </ul>
+        </div>
     </nav>
-    <div class="container" style="margin-top: 150px">
+    <div class="container" style="margin-top: 20px">
         <div class="row justify-content-center align-items-center">
-            <a href="index.html" style="margin-bottom: 30px"><img src="src/Logo Phecell.png" height="100" alt="axis"></a>
-        </div>
-        <div class="row justify-content-center align-items-center">
-                <a style="color: white">Login as</a>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <!-- <div class="welcome"> -->
+          <form align="center" style="margin: 10px">
                 <div>
-                    <a class="btn btn-danger awal" href="login.php">user</a>
-                    <a class="btn btn-danger awal" href="login_admin.php">admin</a>
-                </div>
-            <!-- </div> -->
+                        <h1><br/>Konfirmasi Pembayaran<br/></h1>
+                      </div>  
+            <div align="center" >
+                <label for="nomor">Kode Bayar</label>
+                <input type="text" class="form-control" style="width: 200px">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
-
 </body>
 </html>
