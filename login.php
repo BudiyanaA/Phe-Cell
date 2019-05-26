@@ -18,7 +18,9 @@
 </head>
 <body>
 	
-	<h1>PHE CELL </h1>
+<div style="margin: 0 auto;text-align:center">
+		<img src="src/Logo Phecell.png" width="250">
+	</div>
 	<h3>Solusi paket data anda</h3>
 
 	<div class="kotak">

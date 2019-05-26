@@ -47,13 +47,16 @@
     </nav>
     <div class="container" style="margin-top: 20px">
         <div class="row justify-content-center align-items-center">
-          <form align="center" style="margin: 10px">
-                <div>
-                        <h1><br/>Konfirmasi Pembayaran<br/></h1>
-                      </div>  
+          <form action="bayar_proses.php" method="post" align="center" style="margin: 10px">
+          <div style="margin: 0 auto;text-align:center">
+                  <br/>
+                  <br/>
+                  <img src="src/logotulisan_v2/Tulisan/konfirmbayar.png" width="500">
+              </div>   
             <div align="center" >
+              <br/>
                 <label for="nomor">Kode Bayar</label>
-                <input type="text" class="form-control" style="width: 200px">
+                <input name="billing" type="text" class="form-control" style="width: 200px">
             </div>
             <br/>
             <button type="submit" class="btn btn-primary">Submit</button>

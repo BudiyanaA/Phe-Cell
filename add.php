@@ -51,7 +51,11 @@
     </nav>
   <div class="container" style="margin-top: 20px">
     <div class="row justify-content-center align-items-center">
-      <h1><br/>Buat Pesananmu!</h1>
+    <div style="margin: 0 auto;text-align:center">
+            <br/>
+            <br/>
+            <img src="src/logotulisan_v2/Tulisan/pilihpesan.png" width="250">
+          </div>
       <form action="add_proses.php" method="post" align="center" style="margin: 10px">
         <div align="center">
           <label for="nomor">No. HP</label>
@@ -101,6 +105,7 @@
 			<br/>
       <button type="submit" name="tambah" class="btn btn-primary">Simpan</button>
 		</form>
+  </div>
   </div>
 </body>
 </html>

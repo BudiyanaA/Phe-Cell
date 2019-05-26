@@ -11,6 +11,9 @@
 <head>
 	<title>Register Your Account</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Nunito|Source+Sans+Pro&display=swap');
+	</style>
 </head>
 <body>
 

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pesanan</title>
+    <title>Pesanan</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="jquery.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -48,8 +48,11 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-8" align="center">
-                <h1>STRUK</h1>
+                <div style="margin: 0 auto;text-align:center">
+                    <img src="src/logotulisan_v2/Tulisan/Struk.png" width="250">
+                </div>
                 <br/>
+                <a><img src="src/logotulisan_v2/Kotak-Transparan/Rounded Edgges Struk.png"></a>
                 <table class="struk table table-borderless table-sm table responsive ">
                         <tbody>
                         <tr>
@@ -89,7 +92,7 @@
                         </tr>
                         </tbody>
                 </table>
-                <a class="btn btn-warning" href="home.html">Kembali</a>
+                <a class="btn btn-danger tombol-kembali" href="home.html">Kembali</a>
             </div>
         </div>
     </div>

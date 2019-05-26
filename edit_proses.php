@@ -24,7 +24,7 @@ if(isset($_POST['simpan'])){
 	}else{
 		
 		echo 'Gagal menyimpan data! ';		//Pesan jika proses simpan gagal
-		echo '<a href="edit.php?id='.$id.'">Kembali</a>';	//membuat Link untuk kembali ke halaman edit
+		echo '<a href="status_transaksi.php?id='.$id.'">Kembali</a>';	//membuat Link untuk kembali ke halaman edit
 		
 	}
  

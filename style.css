@@ -1,6 +1,6 @@
 body{
 	font-family: 'Nunito', sans-serif;
-	background: rgb(177, 82, 19)
+	background: url(src/logotulisan_v2/Background/background.jpg)
 }
 
 .inapp{
@@ -9,7 +9,7 @@ body{
 }
  
 .muka{
-	background: url(src/bg2.png)
+	background: url(src/logotulisan_v2/Background/background-welcome.jpg)
 }
 
 .welcome{
@@ -26,6 +26,7 @@ h1{
 h3{
 	text-align: center;
 	font-weight: 100;
+	color: white
 }
 
 h4{
@@ -137,8 +138,16 @@ label{
 }
 
 .struk{
-	width: 300px;
+	width: 400px;
+	/* background: url(src/logotulisan_v2/Kotak-Transparan/Rounded\ Edgges\ Struk.png); */
+	position: relative;
+	margin: -371px;
 }
+
+.tombol-kembali{
+	margin: 392px auto;
+}
+
 
 .table > tbody > tr > .thick-line {
     border-top: 2px solid;
@@ -151,4 +160,28 @@ label{
 .awal{
 	margin: 10px;
 	width: 100px;
+}
+
+.box{
+	margin: 80px auto;
+	text-align: center;
+	position: relative;
+}
+
+.tulisan-box{
+	position: absolute;
+  margin: 12px -342px;
+  font-size: x-large;
+}
+
+.isi-box{
+	position: absolute;
+	/* color: white; */
+	margin: -189px 416px;
+	font-size: 20pt;
+}
+
+.kembali{
+	margin: 182px -316px;
+  position: absolute;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Status Pelanggan</title>
+<title>Status Pelanggan</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script type="text/javascript" src="jquery.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -90,26 +90,30 @@
                     <td><?php echo $data['nominal']+$data['harga_tambahan'];?></td>
                     <td><?php echo "-".$data['potongan'];?></td>
                     <td><?php echo $data['nominal']+$data['harga_tambahan']-$data['potongan'];?></td>
+                    <form action="edit_proses.php" method="post">
                     <td>
 											<div class="form-group">
-											<select class="form-control" id="status" style="width: 160px">
-												<option value="0">Belum Bayar</option>
-												<option value="1">Sudah Bayar</option>
+											<select name="status_pembayaran" class="form-control" id="status" style="width: 160px">
+												<option value="0" <?php if($data['status_pembayaran'] == '0'){echo 'selected';} ?>>Belum Bayar</option>
+												<option value="1" <?php if($data['status_pembayaran'] == '1'){echo 'selected';} ?>>Sudah Bayar</option>
 											</select>
 											</div>
 										</td>
                     <td>
 											<div class="form-group">
-                      <select class="form-control" id="Status" style="width: 160px">
-                          <option value="0">Belum Terkirim</option>
-                          <option value="1">Sudah Terkirim</option>
+                      <select name="status_pengiriman" class="form-control" id="Status" style="width: 160px">
+                          <option value="0" <?php if($data['status_pengiriman'] == '0'){echo 'selected';} ?>>Belum Terkirim</option>
+                          <option value="1" <?php if($data['status_pengiriman'] == '1'){echo 'selected';} ?>>Sudah Terkirim</option>
                       </select>
                       </div>
 										</td>
                     <td>
 												<!-- <a class="edit" href="edit.php?id=<?php echo $data['id_pesanan']; ?>">Edit</a> | -->
-												<a href="delete.php?id=<?php echo $data['id_pesanan']; ?>"><img src="src/delete.png" width="40" alt="Hapus"/></a>				
+												<a href="delete.php?id=<?php echo $data['id_pesanan']; ?>"><img src="src/delete.png" width="40" alt="Hapus"/></a>
+                        <input type="hidden" name="id" value="<?php echo $data['id_pesanan']; ?>">
+                        <input type="submit" name="simpan" value="Simpan">				
                     </td>
+                    </form>
                 </tr>
 						<?php } ?>
 						</tbody>
